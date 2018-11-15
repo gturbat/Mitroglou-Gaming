@@ -1,0 +1,18 @@
+---Grille de jeu---
+
+size = (if no size enterd, biggest tile)
+grid = [[int_tile, ...], ...]
+dic_grid = {int_tile:str_image, ...}
+
+---Ordre---
+
+dic_orders = {str_order:[str_image, (x,y)], ...}
+l'appel se fera par une fonction set_order()
+
+---Data---
+"""
+Ne concerne pas la grille de valeur (score, nombre de vie, ...)
+"""
+
+dic_values = {str_value:"phrase"}
+l'appel se fera par une fonction get_value()
