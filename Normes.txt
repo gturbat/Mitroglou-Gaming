@@ -1,18 +1,57 @@
----Grille de jeu---
+------------------------------------------------
+
+The main must be named "play(ia)"
+
+------------------------------------------------
+
+--- Each time it waits instruction, it must be written as following : ---
+
+if ia :
+  command = ia_nameofthegame.set_order(grid, dic_values)
+else :
+  command = human_nameofthegame.set_order()
+
+------------------------------------------------
+
+--- showing the game is made as following : ---
+
+import display
+""" At the beginning """
+if ia :
+  """ call every init orders """
+else :
+  display.show_init(dic_orders_init)
+display.show_orders()
+
+display.grid(grid, dic_grid)
+""" during the play(), when u want to refresh the grid """
+  ...
+  display.grid(grid, dic_grid)
+  
+------------------------------------------------
+
+---Game grid---
 
 size = (int_length, int_height) if no size entered, biggest tile
 grid = [[int_tile, ...], ...]
 dic_grid = {int_tile:str_image, ...}
 
----Ordre---
+------------------------------------------------
+
+---Orders---
 
 dic_orders = {str_order:[str_image, (x,y)], ...}
-l'appel se fera par une fonction set_order()
+dic_orders_init = {str_order:[str_image, (x,y)], ...} #
+the call function is set_order()
+
+------------------------------------------------
 
 ---Data---
 """
-Ne concerne pas la grille de valeur (score, nombre de vie, ...)
+Do not concern the grid (score, life points, turn, ...)
 """
 
-dic_values = {str_value:"phrase"}
-l'appel se fera par une fonction get_value()
+dic_values = {str_value:"sentence"}
+the call function is get_value()
+
+------------------------------------------------
